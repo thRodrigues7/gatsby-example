@@ -4,19 +4,19 @@ import Seo from '../components/seo'
 import { graphql } from 'gatsby'
 
 const BlogPage = ({ data }) => {
-    return (
-        <Layout pageTitle="My Blog Posts">
-            <ul>
-                {
-                    data.allFile.nodes.map(node => (
-                        <li key={node.name}>
-                            {node.name}
-                        </li>
-                    ))
-                }
-            </ul>
-        </Layout>
-    )
+  return (
+    <Layout pageTitle="My Blog Posts">
+      <ul>
+        {
+          data.allFile.nodes.map(node => (
+            <li key={node.name}>
+              {node.name}
+            </li>
+          ))
+        }
+      </ul>
+    </Layout>
+  )
 }
 
 export const query = graphql`
